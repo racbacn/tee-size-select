@@ -1,1 +1,17 @@
-<p>size-selector works!</p>
+<form class="form" (ngSubmit)="onSizeSelectorFormSubmit()">
+  <p class="form__label">
+    <span class="form__label__label">Size<span class="asterisk">*</span></span>
+    {{ "s" }}
+  </p>
+  <div class="form__selector">
+    <button
+      type="button"
+      class="form__selector__btn"
+      *ngFor="let size of sizes"
+      [ngClass]="{ 'form__selector__btn--selected': size === 's' }"
+    >
+      {{ size | uppercase }}
+    </button>
+  </div>
+  <button type="submit" class="form__submit-btn">add to cart</button>
+</form>

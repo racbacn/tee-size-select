@@ -1,1 +1,21 @@
-<p>add-to-cart works!</p>
+<section class="add">
+  <div class="add__left">
+    <img
+      src="../../../assets/classic-tee.jpg"
+      alt="classic tee photo"
+      class="add__left__image"
+    />
+  </div>
+  <div class="add__right">
+    <h2 class="add__right__title">Classic Tee</h2>
+    <p class="add__right__price">{{ "75" | currency }}</p>
+    <p class="add__right__description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio consequatur
+      illo voluptatibus similique itaque vitae esse harum veritatis provident at
+      dicta officia natus, quia explicabo suscipit ad, corporis magnam, iste
+      pariatur alias totam optio. Nemo libero nesciunt perferendis quisquam
+      recusandae?
+    </p>
+    <app-size-selector class="add__right__size-selector"></app-size-selector>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+@use "../../../styles/colors";
+
+.form {
+  &__label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+
+    &__label {
+      color: colors.$light;
+    }
+  }
+
+  &__selector {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.6rem;
+
+    &__btn {
+      border: 0.1rem solid colors.$light-grey;
+      padding: 1.4rem 1.6rem;
+      background-color: rgba(colors.$light-grey, 0.05);
+      font-size: 1rem;
+      color: colors.$light;
+      line-height: 1;
+      cursor: pointer;
+
+      &--selected {
+        cursor: auto;
+        border: 0.2rem solid colors.$border-dark-grey;
+      }
+    }
+  }
+
+  &__submit-btn {
+    text-transform: uppercase;
+    background-color: colors.$lightest;
+    border: 0.2rem solid colors.$border-dark-grey;
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: colors.$dark;
+  }
+}
+
+.asterisk {
+  color: colors.$warning;
+}

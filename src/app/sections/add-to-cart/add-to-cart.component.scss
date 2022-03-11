@@ -1,0 +1,51 @@
+@use "../../../styles/colors";
+
+$border: 0.1rem solid rgba(colors.$light-grey, 0.15);
+%margin-left {
+  margin-left: 0.4rem;
+}
+
+.add {
+  display: flex;
+  padding: 1rem 8rem 3.2rem 26rem;
+
+  &__left {
+    flex-basis: 50%;
+    &__image {
+      height: 60rem;
+    }
+  }
+
+  &__right {
+    flex-basis: 40%;
+    color: colors.$dark;
+
+    &__title {
+      @extend %margin-left;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+    }
+
+    &__price {
+      border-top: $border;
+      border-bottom: $border;
+      padding: 0.6rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1.8rem;
+    }
+
+    &__description {
+      @extend %margin-left;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.8;
+      color: colors.$light;
+    }
+
+    &__size-selector {
+      @extend %margin-left;
+    }
+  }
+}
