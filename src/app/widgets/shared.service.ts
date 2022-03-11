@@ -46,22 +46,7 @@ export class SharedService {
     },
   };
   cart: CartItem[] = [];
-  private cartSource = new BehaviorSubject<CartItem[]>([
-    {
-      imageSource: 'classic-tee.jpg',
-      name: this.teeName,
-      quantity: 1,
-      price: this.price,
-      size: 's',
-    },
-    {
-      imageSource: 'classic-tee.jpg',
-      name: this.teeName,
-      quantity: 3,
-      price: this.price,
-      size: 'l',
-    },
-  ]);
+  private cartSource = new BehaviorSubject<CartItem[]>([]);
   currentCart = this.cartSource.asObservable();
 
   constructor() {}

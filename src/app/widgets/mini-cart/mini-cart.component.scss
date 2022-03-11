@@ -1,4 +1,53 @@
+@use "../../../styles/colors";
+
+.container {
+  position: relative;
+  padding: 0.6rem 0;
+}
+
 .label {
   font-size: 1rem;
   cursor: pointer;
+  user-select: none;
+}
+
+.box {
+  position: absolute;
+  top: 100%;
+  width: 28rem;
+  right: 0;
+  border: 0.1rem solid colors.$light-grey;
+  background-color: colors.$lightest;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+
+  &__item {
+    display: flex;
+    gap: 2rem;
+    color: colors.$dark;
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    &__image {
+      height: 10rem;
+    }
+
+    &__tee-name {
+      margin-bottom: 0.4rem;
+    }
+
+    &__pricing {
+      margin-bottom: 0.9rem;
+    }
+
+    &__price {
+      font-weight: 600;
+    }
+
+    &__size {
+      font-size: 1.2rem;
+    }
+  }
 }

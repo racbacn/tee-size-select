@@ -1,3 +1,26 @@
-<p class="label">
-  <span>My Cart</span><span class="label__count"> ( {{ "4" }} )</span>
-</p>
+<div class="container">
+  <p class="label" ngClass="'label'active" (click)="isOpened = !isOpened">
+    <span>My Cart</span
+    ><span class="label__count"> ( {{ totalQuantity }} )</span>
+  </p>
+  <div class="box" *ngIf="isOpened">
+    <p *ngIf="!cart.length">No items added yet.</p>
+    <div class="box__item" *ngFor="let item of cart">
+      <div class="box__item__left">
+        <img
+          class="box__item__image"
+          [src]="'../../../assets/' + item.imageSource"
+          alt="image of "
+        />
+      </div>
+      <div class="box__item__right">
+        <p class="box__item__tee-name">{{ item.name }}</p>
+        <p class="box__item__pricing">
+          <span class="box__item__quantity">{{ item.quantity + "x" }} </span>
+          <span class="box__item__price">{{ item.price | currency }}</span>
+        </p>
+        <p class="box__item__size">Size: {{ item.size | uppercase }}</p>
+      </div>
+    </div>
+  </div>
+</div>

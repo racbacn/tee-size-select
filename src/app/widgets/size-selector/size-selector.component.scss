@@ -35,7 +35,7 @@
 
   &__submit-btn {
     text-transform: uppercase;
-    background-color: colors.$lightest;
+    background-color: colors.$lighter;
     border: 0.2rem solid colors.$border-dark-grey;
     padding: 0.8rem 2rem;
     font-size: 1.4rem;
@@ -46,7 +46,7 @@
     transition: color 0.2s, background-color 0.2s;
 
     &:hover {
-      color: colors.$lightest;
+      color: colors.$lighter;
       background-color: colors.$dark;
     }
   }
