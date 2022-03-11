@@ -49,3 +49,32 @@ $border: 0.1rem solid rgba(colors.$light-grey, 0.15);
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .add {
+    padding: 1rem 1rem 6.4rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .add {
+    padding: 1rem 1rem 6.4rem;
+    justify-content: center;
+    flex-direction: column;
+
+    &__left {
+      flex-basis: 85%;
+      display: flex;
+      justify-content: center;
+      &__image {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__right {
+      flex-basis: 90%;
+    }
+  }
+}
