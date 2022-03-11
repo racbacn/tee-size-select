@@ -7,8 +7,8 @@
     />
   </div>
   <div class="add__right">
-    <h2 class="add__right__title">Classic Tee</h2>
-    <p class="add__right__price">{{ "75" | currency }}</p>
+    <h2 class="add__right__title">{{ teeName }}</h2>
+    <p class="add__right__price">{{ price | currency }}</p>
     <p class="add__right__description">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio consequatur
       illo voluptatibus similique itaque vitae esse harum veritatis provident at
@@ -16,6 +16,9 @@
       pariatur alias totam optio. Nemo libero nesciunt perferendis quisquam
       recusandae?
     </p>
-    <app-size-selector class="add__right__size-selector"></app-size-selector>
+    <app-size-selector
+      class="add__right__size-selector"
+      (sizeSelectorFormSubmit)="onSizeSelectorFormSubmit($event)"
+    ></app-size-selector>
   </div>
 </section>

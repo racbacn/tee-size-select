@@ -1,14 +1,19 @@
-<form class="form" (ngSubmit)="onSizeSelectorFormSubmit()">
+<form
+  class="form"
+  (ngSubmit)="onSizeSelectorFormSubmit()"
+  [formGroup]="sizeSelectorForm"
+>
   <p class="form__label">
     <span class="form__label__label">Size<span class="asterisk">*</span></span>
-    {{ "s" }}
+    {{ selectedSize }}
   </p>
   <div class="form__selector">
     <button
       type="button"
       class="form__selector__btn"
       *ngFor="let size of sizes"
-      [ngClass]="{ 'form__selector__btn--selected': size === 's' }"
+      [ngClass]="{ 'form__selector__btn--selected': selectedSize === size }"
+      (click)="onSizeSelect(size)"
     >
       {{ size | uppercase }}
     </button>

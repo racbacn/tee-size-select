@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 export type Size = 's' | 'm' | 'l';
@@ -8,19 +8,20 @@ export type Size = 's' | 'm' | 'l';
   templateUrl: './size-selector.component.html',
   styleUrls: ['./size-selector.component.scss'],
 })
-export class SizeSelectorComponent implements OnInit {
+export class SizeSelectorComponent {
   @Output() sizeSelectorFormSubmit = new EventEmitter<Size>();
   sizeSelectorForm = this.fb.group({
     size: this.fb.control('', Validators.required),
   });
   sizes: Size[] = ['s', 'm', 'l'];
+  selectedSize!: Size;
   constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {}
+  onSizeSelect(size: Size) {
+    this.selectedSize = size;
+  }
 
   onSizeSelectorFormSubmit() {
-    const value: Size = this.sizeSelectorForm.value.size;
-    console.log({ value });
-    this.sizeSelectorFormSubmit.emit(value);
+    this.sizeSelectorFormSubmit.emit(this.selectedSize);
   }
 }

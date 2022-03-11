@@ -42,6 +42,13 @@
     font-weight: 600;
     letter-spacing: 0.1rem;
     color: colors.$dark;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+
+    &:hover {
+      color: colors.$lightest;
+      background-color: colors.$dark;
+    }
   }
 }
 
