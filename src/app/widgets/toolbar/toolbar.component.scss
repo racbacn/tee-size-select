@@ -1,0 +1,9 @@
+@use "../../../styles/colors";
+
+.nav {
+  margin-top: 1.6rem;
+  background-color: colors.$header-background;
+  padding: 0.8rem 16rem;
+  display: flex;
+  justify-content: flex-end;
+}
